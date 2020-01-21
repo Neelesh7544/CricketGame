@@ -1,23 +1,14 @@
 package com.example.simplerestapis.models;
 
-public class Player {
-    private String name;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Player extends Team{
     private long id;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    private String name;
+    private int age;
+    private long score;
+    private long wickets;
+    private String playingRole;
 
 }
