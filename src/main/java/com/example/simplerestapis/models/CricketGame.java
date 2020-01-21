@@ -10,8 +10,6 @@ import java.util.Random;
 public class CricketGame {
 
     static  int temp = Integer.MAX_VALUE;
-    int teamAscore = 0;
-    int teamBscore = 0;
     public Match setup(){
         Match m = new Match();
         return m;
