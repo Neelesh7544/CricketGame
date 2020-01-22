@@ -2,6 +2,8 @@ package com.example.simplerestapis.models;
 
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+
 @Component
 public class Result {
     private String winner;

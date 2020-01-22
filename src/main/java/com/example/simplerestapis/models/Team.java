@@ -2,13 +2,34 @@ package com.example.simplerestapis.models;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
 @Component
-public class Team  {
-    Team[] team = new Player[11];
+public class Team < T extends Player> {
+    String name;
+    List<T> players = new ArrayList<>();
     HashMap<Integer,Integer> teamMap = new HashMap<>();
-    public int  playInning(){
+    public String getName() {
+        return name;
+    }
+    public List<T> getPlayers(){
+        return this.players;
+    }
+    public boolean addPlayer(T player){
+        if(!players.contains(player)){
+            this.players.add(player);
+            return true;
+        }
+        return false;
+    }
+    public int  playInning(Team a, Team b){
         CricketGame game = new CricketGame();
-        return game.start(teamMap);
+        return game.start(teamMap,a,b);
+    }
+
+    public void setName(String s) {
+        this.name = s;
     }
 }
