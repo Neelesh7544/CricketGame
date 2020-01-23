@@ -3,7 +3,7 @@ package com.example.simplerestapis.models;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Player  {
+public class Player {
     String name;
     int id;
     int matchesPlayed;
@@ -14,59 +14,76 @@ public class Player  {
     int runsGiven;
     int wicketsTaken;
     int maidenOvers;
+
     public String getName() {
         return this.name;
     }
+
     public void setName(String abc) {
         this.name = abc;
     }
-    public void setRunsScored(int a){
+
+    public void setRunsScored(int a) {
         this.runsScored = a;
     }
-    public int getRunsScored(){
+
+    public int getRunsScored() {
         return this.runsScored;
     }
-    public void setNumberOfBoundaries(int a){
+
+    public void setNumberOfBoundaries(int a) {
         this.numberOfBoundaries = a;
     }
-    public int getNumberOfBoundaries(){
+
+    public int getNumberOfBoundaries() {
         return this.numberOfBoundaries;
     }
-    public int getNumberOfBallsPlayed(){
+
+    public int getNumberOfBallsPlayed() {
         return this.numberOfBallsPlayed;
     }
-    public void setNumberOfBallsPlayed(int a){
+
+    public void setNumberOfBallsPlayed(int a) {
         this.numberOfBallsPlayed = a;
     }
-    public void setWicketsTaken(int a){
+
+    public void setWicketsTaken(int a) {
         this.wicketsTaken = a;
     }
-    public int getWicketsTaken(){
-        return  this.wicketsTaken;
+
+    public int getWicketsTaken() {
+        return this.wicketsTaken;
     }
-    public void setNumOfOvers(float a){
+
+    public void setNumOfOvers(float a) {
         this.numOfOvers = a;
     }
-    public float getNumOfOvers(){
+
+    public float getNumOfOvers() {
         return this.numOfOvers;
     }
-    public void setRunsGiven(int a){
+
+    public void setRunsGiven(int a) {
         this.runsGiven = a;
     }
-    public int getRunsGiven(){
+
+    public int getRunsGiven() {
         return this.runsGiven;
     }
-    public void setMaidenOvers(int a){
+
+    public void setMaidenOvers(int a) {
         this.maidenOvers = a;
     }
-    public int getMaidenOvers(){
+
+    public int getMaidenOvers() {
         return this.maidenOvers;
     }
 
     public void setMatchesPlayed(int a) {
         this.matchesPlayed = a;
     }
-    public int getMatchesPlayed(){
+
+    public int getMatchesPlayed() {
         return this.matchesPlayed;
     }
 }

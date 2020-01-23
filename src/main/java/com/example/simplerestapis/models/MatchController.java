@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 public class MatchController {
     CricketGame game = new CricketGame();
     Match m;
-    Player p ;
-    public void playGame(){
+    Player p;
+
+    public void playGame() {
         m = game.setup();
         m.startMatch();
 
@@ -15,13 +16,14 @@ public class MatchController {
 
     public Result finishGame() {
 
-        return m.displayResult(m.A.teamMap,m.B.teamMap);
+        return m.displayResult(m.A.teamMap, m.B.teamMap);
     }
-    public Team[] generateScoreCard(){
-        return new Team[]{m.A,m.B};
+
+    public Team[] generateScoreCard() {
+        return new Team[]{m.A, m.B};
     }
 
     public Team[] showTeams() {
-        return new Team[]{m.A,m.B};
+        return new Team[]{m.A, m.B};
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class GameCricket {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GameCricket.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(GameCricket.class, args);
+    }
 }
