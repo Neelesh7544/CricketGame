@@ -1,29 +1,21 @@
 package com.example.simplerestapis.controller;
 
-import com.example.simplerestapis.models.*;
+import com.example.simplerestapis.beans.Scorecard;
+import com.example.simplerestapis.services.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Component
 public class GameController {
-    MatchController m = new MatchController();
+    @Autowired
+    private MatchController m;
 
     @RequestMapping("/match")
-    public Result Match() {
+    public Scorecard match() {
         m.playGame();
-        Result r = m.finishGame();
-        return r;
-    }
-
-    @RequestMapping("/teams")
-    public Team[] teams() {
-
-        return m.showTeams();
-    }
-
-    @RequestMapping("/scorecard")
-    public Team[] scoreCard() {
-
-        return m.generateScoreCard();
+        return m.finishGame();
     }
 }
