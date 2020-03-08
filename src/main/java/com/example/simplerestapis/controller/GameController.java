@@ -1,7 +1,7 @@
 package com.example.simplerestapis.controller;
 
-import com.example.simplerestapis.beans.Scorecard;
-import com.example.simplerestapis.services.*;
+import com.example.simplerestapis.service.scorecard.Scorecard;
+import com.example.simplerestapis.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Component
 public class GameController {
     @Autowired
-    private MatchController m;
+    private MatchController matchController;
 
-    @RequestMapping("/match")
+    @RequestMapping("/play")
     public Scorecard match() {
-        m.playGame();
-        return m.finishGame();
+        return matchController.playGame();
     }
+
+
 }

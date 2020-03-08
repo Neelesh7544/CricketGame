@@ -1,6 +1,6 @@
-package com.example.simplerestapis.util;
+package com.example.simplerestapis.service.player.util;
 
-public class PlayerRatingUtil {
+public class PlayerUtils {
     public static double[] getdistribution(int rating){
         if (rating == 3){
             return new double[]{0.07,0.1,0.25,0.3,0.1,0.05,0.1,0.03};

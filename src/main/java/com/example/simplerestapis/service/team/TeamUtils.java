@@ -1,10 +1,9 @@
-package com.example.simplerestapis.util;
+package com.example.simplerestapis.service.team;
 
-import com.example.simplerestapis.beans.Player;
-import com.example.simplerestapis.services.Team;
+import com.example.simplerestapis.service.player.beans.Player;
 
-public class CreateTeamUtil {
-    public static Team createTeam(Team team){
+public class TeamUtils {
+    public static void createTeam(Team team){
         int id = 0;
         for (int i = 0; i < 4; i++) {
             Player p = new Player();
@@ -30,7 +29,6 @@ public class CreateTeamUtil {
             p.setRating(1);
             team.addPlayer(p);
         }
-        return team;
 
     }
 }

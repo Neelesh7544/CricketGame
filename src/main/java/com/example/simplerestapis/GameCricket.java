@@ -1,6 +1,5 @@
 package com.example.simplerestapis;
 
-import com.example.simplerestapis.controller.GameController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;

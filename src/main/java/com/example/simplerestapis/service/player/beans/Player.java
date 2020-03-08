@@ -1,4 +1,4 @@
-package com.example.simplerestapis.beans;
+package com.example.simplerestapis.service.player.beans;
 
 import lombok.Data;
 @Data
