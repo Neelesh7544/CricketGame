@@ -30,9 +30,15 @@ public class GameController {
     public List<Scorecard> getMatches(){
         return scorecardrepository.findAll(Sort.by(Sort.Direction.DESC, "createdDate"));
     }
-    @GetMapping("/teamsResult")
+    @RequestMapping("/teamsresult")
     @ResponseBody
     public String getTeamsResult(@RequestParam String id) {
-        return "ID: " + id;
+        List<Scorecard> wonmatches = scorecardrepository.findBywinner(id);
+        List<Scorecard> lostmatches = scorecardrepository.findBywinnerNot(id);
+        List<Scorecard> drawmatches = scorecardrepository.findBywinner("Match Tied");
+        int won = wonmatches.size();
+        int lost = lostmatches.size();
+        int draw = drawmatches.size();
+        return "Won :" + won + "Lost :" + lost + "Draw :" + draw;
     }
 }
