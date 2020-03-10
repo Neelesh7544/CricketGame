@@ -1,4 +1,4 @@
-package com.example.simplerestapis.service.scorecard;
+package com.example.simplerestapis.service.player.beans;
 
 import lombok.Data;
 

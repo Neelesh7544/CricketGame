@@ -1,15 +1,20 @@
 package com.example.simplerestapis.service;
 
-import com.example.simplerestapis.service.scorecard.Scorecard;
-import org.springframework.stereotype.Component;
+import com.example.simplerestapis.repository.Playerrepository;
+import com.example.simplerestapis.repository.Scorecardrepository;
+import com.example.simplerestapis.repository.Teamrepository;
+import com.example.simplerestapis.service.scorecard.bean.Scorecard;
+import org.springframework.stereotype.Service;
 
-@Component
+
+@Service
 public class MatchController {
-
-    public Scorecard playGame() {
+    public Scorecard playGame(Scorecardrepository scorecardrepository, Teamrepository teamrepository, Playerrepository playerrepository) {
         CricketMatch cricketMatch = new CricketMatch();
-        cricketMatch.createMatch();
+        cricketMatch.createMatch(teamrepository,playerrepository);
         cricketMatch.startMatch();
-        return cricketMatch.getScorecard();
+        Scorecard scorecard = cricketMatch.getScorecard();
+        scorecardrepository.save(scorecard);
+        return scorecard;
     }
 }

@@ -1,6 +1,7 @@
-package com.example.simplerestapis.service.team;
+package com.example.simplerestapis.service.team.util;
 
 
+import com.example.simplerestapis.service.team.bean.Teamscorecard;
 
 public class TeamscorecardUtil {
 

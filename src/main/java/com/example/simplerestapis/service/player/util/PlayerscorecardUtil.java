@@ -1,5 +1,6 @@
-package com.example.simplerestapis.service.scorecard;
+package com.example.simplerestapis.service.player.util;
 
+import com.example.simplerestapis.service.player.beans.Playerscorecard;
 import org.jetbrains.annotations.NotNull;
 
 public class PlayerscorecardUtil
